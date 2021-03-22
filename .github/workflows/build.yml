@@ -26,6 +26,8 @@ jobs:
         run: make style types requirements
       - name: Run tests and publish coverage
         uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageCommand: make coverage
           debug: true
