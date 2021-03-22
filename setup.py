@@ -3,7 +3,7 @@ from typing import Optional
 from setuptools import setup, find_packages
 
 
-package_name = 'import_me'
+package_name = 'dont_import_me'
 
 
 def get_version() -> Optional[str]:
