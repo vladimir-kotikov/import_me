@@ -23,8 +23,9 @@ jobs:
       - name: Run mdl
         uses: actionshub/markdownlint@main
       - name: Run checks
-        run: make style types requirements coverage
-      - name: Publish code coverage
+        run: make style types requirements
+      - name: Run tests and publish coverage
         uses: paambaati/codeclimate-action@v2.7.5
         with:
+          coverageCommand: make coverage
           debug: true
